@@ -1,7 +1,7 @@
 # DeadlineMate — AI-Powered Agentic Productivity Companion
 
 ## 🔗 Project Submission Link
-> **Google Doc Submission Link:** [DeadlineMate - Project Description & Submission Document](https://docs.google.com/document/d/1BvIpx60kE6v8v_M1XW0rJ_Xb31kG7Lp-v457-a5a4dec021ba/edit?usp=sharing)
+> **Google Doc Submission Link:** [DeadlineMate - Project Description & Submission Document](https://docs.google.com/document/d/1K-xE14qS-wbx35xkT09tJlpwt2N1Wq_Uf2FIj9664GI/edit?usp=sharing)
 
 ---
 
