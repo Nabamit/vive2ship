@@ -1,0 +1,68 @@
+{
+  "entities": {
+    "task": {
+      "title": "Task",
+      "description": "A task created by the user containing metadata, checklists, and time blocking slots",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "dueDate": { "type": "string" },
+        "priority": { "type": "string", "enum": ["High", "Medium", "Low"] },
+        "urgencyScore": { "type": "integer" },
+        "effort": { "type": "string", "enum": ["low", "medium", "high"] },
+        "importance": { "type": "integer" },
+        "description": { "type": "string" },
+        "originalInput": { "type": "string" },
+        "status": { "type": "string", "enum": ["pending", "completed"] },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "subtasks": { "type": "array" },
+        "scheduledBlocks": { "type": "array" }
+      },
+      "required": ["id", "userId", "title", "dueDate", "priority", "urgencyScore", "effort", "importance", "description", "originalInput", "status", "createdAt", "subtasks"]
+    },
+    "habit": {
+      "title": "Habit",
+      "description": "A habit/goal the user wants to maintain",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "streak": { "type": "integer" },
+        "lastCompletedDate": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "userId", "title", "streak", "createdAt"]
+    },
+    "nudge": {
+      "title": "Nudge",
+      "description": "An AI-generated nudge notification logged for the user",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "message": { "type": "string" },
+        "actionStep": { "type": "string" },
+        "urgency": { "type": "string", "enum": ["low", "medium", "high"] },
+        "timestamp": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "userId", "message", "actionStep", "urgency", "timestamp"]
+    }
+  },
+  "firestore": {
+    "tasks/{taskId}": {
+      "schema": "task",
+      "description": "Collection of tasks"
+    },
+    "habits/{habitId}": {
+      "schema": "habit",
+      "description": "Collection of habits"
+    },
+    "nudges/{nudgeId}": {
+      "schema": "nudge",
+      "description": "Collection of notification nudges"
+    }
+  }
+}

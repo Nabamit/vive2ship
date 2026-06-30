@@ -1,0 +1,10 @@
+{
+  "name": "DeadlineMate",
+  "description": "An AI-powered agentic productivity companion that breaks down tasks, schedules them on Google Calendar, and provides context-aware nudges.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
